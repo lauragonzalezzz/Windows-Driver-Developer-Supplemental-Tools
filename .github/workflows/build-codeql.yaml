@@ -29,12 +29,12 @@ jobs:
         submodules: recursive
     
     - name: Download CodeQL CLI
-      uses: i3h/download-release-asset@v1.2.0
+      uses: i3h/download-release-asset@latest
       with:
-        owner: "github"
-        repo: "codeql-cli-binaries"
-        tag: "v2.11.5"
-        file: "codeql-win64.zip"
+        owner: github
+        repo: codeql-cli-binaries
+        tag: v2.11.5
+        file: codeql-win64.zip
     
     - name: Unzip CodeQL CLI
       run: Expand-Archive -Path codeql-win64.zip -DestinationPath .\codeql-zip -Force
